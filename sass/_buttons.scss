@@ -1,0 +1,40 @@
+
+button.btn-col {
+    position: relative;
+    display: block;
+    margin: 20px 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    background-color: transparent;
+    border: 1px solid #E15347;
+    overflow: hidden;
+    color: #bb8b36;
+    transition: .15s .15s;
+    z-index: 9999;
+}
+
+button.btn-col::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #E15347;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -100%;
+    transition: left 0.2s, height 0.1s 0.2s;
+    z-index: -1;
+}
+
+button.btn-col:hover::before {
+    left: 0;
+    height: 103%;
+}
+
+button.btn-col:hover {
+    color: #fff;
+}

@@ -1,0 +1,367 @@
+/**
+ * MIXIN: Responsive Media Queries.
+ *
+ * Creates responsive media queries for eight different screen sizes.
+ * These are based on min-width which means if x is the size then your
+ * CSS will affect any device with screen width x and above.
+ *
+ * USAGE: 
+ *	@include mob(320)  { }
+ *	@include mob(480)  { }
+ *	@include mob(768)  { }
+ *	@include mob(1024) { }
+ *	@include mob(1140) { }
+ *	@include mob(1280) { }
+ *	@include mob(1580) { }
+ *
+ * CSS content goes inside {} brackets. These mixins should be used inside
+ * a class definition. For example:
+ *
+ * The following CSS will hide the .header on screen width 320px and above.
+ * .header {
+ * 	  @include mob(320)  { display: none; }
+ * }
+ *
+ * 
+ */
+.blog-wrapp {
+  background-color: #fce7e2;
+  padding: 60px 0;
+}
+
+.blog-wrapp .blog-wrapper {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.blog-wrapp .blog-wrapper button.slick-prev.slick-arrow {
+  background-color: transparent;
+  position: absolute;
+  z-index: 1;
+}
+
+.blog-wrapp .blog-wrapper button.slick-prev.slick-arrow::before {
+  content: "test";
+}
+
+.blog-wrapp .blog-wrapper .img-wrap {
+  background: #fff;
+  padding: 0;
+  width: 550px;
+  padding-bottom: 30px;
+  margin: 10px 50px;
+  text-align: center;
+  -webkit-box-shadow: 2px 16px 39px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 16px 39px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.blog-wrapp .blog-wrapper .img-wrap h3,
+.blog-wrapp .blog-wrapper .img-wrap p {
+  text-align: center;
+}
+
+.blog-wrapp .blog-wrapper .img-wrap h3 {
+  font-size: 35px;
+  color: #bb8b36;
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+@media (max-width: 320px) {
+  .blog-wrapp .blog-wrapper .img-wrap h3 {
+    font-size: 28px;
+  }
+}
+
+.blog-wrapp .blog-wrapper .img-wrap button {
+  margin: 20px auto;
+}
+
+.blog-wrapp .blog-wrapper .img-wrap.hovered-card {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-active {
+  outline: none !important;
+}
+
+.blog-wrapp h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 50px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #E15347;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 320px) {
+  .blog-wrapp h2 {
+    font-size: 40px;
+  }
+}
+
+.blog-wrapp {
+  position: relative;
+}
+
+.blog-wrapp .left {
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 25px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  .blog-wrapp .left {
+    top: 66%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-wrapp .left {
+    top: 63%;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-wrapp .left {
+    top: 66.5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .blog-wrapp .left {
+    top: 64.5%;
+  }
+}
+
+.blog-wrapp .right {
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 55px);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media (max-width: 1024px) {
+  .blog-wrapp .right {
+    top: 66%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-wrapp .right {
+    top: 63%;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-wrapp .right {
+    top: 66.5%;
+  }
+}
+
+@media (max-width: 320px) {
+  .blog-wrapp .right {
+    top: 64.5%;
+    right: calc(100% - 45px);
+  }
+}
+
+.blog-wrapp i.fas {
+  color: #bb8b36;
+  font-size: 50px;
+}
+
+@media (max-width: 320px) {
+  .blog-wrapp i.fas {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 320px) {
+  p.gallery-copy {
+    margin-bottom: 50px;
+  }
+}
+
+footer {
+  background-color: #545759;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    padding-bottom: 60px;
+  }
+}
+
+footer h3 {
+  font-size: 50px;
+  color: #DCDCDC;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  footer h3 {
+    text-align: left;
+    padding: 0 10%;
+  }
+}
+
+footer p {
+  color: #DCDCDC;
+  padding: 0 20%;
+  font-size: 18px;
+}
+
+@media (max-width: 1024px) {
+  footer p {
+    padding: 0 10%;
+  }
+}
+
+.social {
+  width: 100%;
+  text-align: center;
+}
+
+.social i {
+  color: #DCDCDC;
+  font-size: 50px;
+  margin-top: 30px;
+  width: 80px;
+  height: auto;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-links-left {
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  width: 100%;
+}
+
+.footer-links-right {
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  width: 100%;
+  color: #DCDCDC;
+}
+
+.footer-links-left p {
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  .footer-links-left p {
+    font-size: 13px;
+  }
+}
+
+.footer-links-right a {
+  color: #DCDCDC;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Laila', serif;
+  font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  .footer-links-right a {
+    font-size: 13px;
+  }
+}
+
+button.btn-col {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 16px;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid #E15347;
+  overflow: hidden;
+  color: #bb8b36;
+  -webkit-transition: .15s .15s;
+  transition: .15s .15s;
+  z-index: 9999;
+}
+
+button.btn-col::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #E15347;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  top: 50%;
+  left: -100%;
+  -webkit-transition: left 0.2s, height 0.1s 0.2s;
+  transition: left 0.2s, height 0.1s 0.2s;
+  z-index: -1;
+}
+
+button.btn-col:hover::before {
+  left: 0;
+  height: 103%;
+}
+
+button.btn-col:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */

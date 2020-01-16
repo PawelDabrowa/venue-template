@@ -1,0 +1,134 @@
+.blog-wrapp{
+    background-color: #fce7e2;
+    padding: 60px 0;
+.blog-wrapper {
+
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  
+    button.slick-prev.slick-arrow {
+        background-color: transparent;
+        position: absolute;
+        z-index: 1;
+        
+    }
+
+    button.slick-prev.slick-arrow::before {
+        content:"test";
+        
+    }
+
+    
+
+    .img-wrap {
+        background: #fff;
+        padding: 0;
+        width: 550px;
+        // height: 500px;
+        padding-bottom: 30px;
+        margin: 10px 50px;
+        text-align: center;
+        box-shadow: 2px 16px 39px 1px rgba(0, 0, 0, 0.3);
+        transition: 1s;
+
+        h3,
+        p {
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 35px;
+            color: #bb8b36;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            
+                	  @include mob(320)  { 
+                         font-size: 28px; }
+                 
+        }
+      
+        button {
+            margin: 20px auto;
+            // @include mob(320)  { 
+            //     font-size: 11px;
+            // padding: 10px 15px ;
+            // }
+        }
+    }
+
+    .img-wrap.hovered-card {
+        box-shadow: none;
+    }
+}
+
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-active {
+    outline: none !important;
+}
+
+// .blog-wrapp {
+//     background-color: #FBEEF3;
+// }
+
+
+.blog-wrapp h2 {
+    display: flex;
+    font-size: 50px;
+    flex-direction: column;
+    color: #E15347;
+    text-align: center;
+    margin-bottom: 30px;
+     @include mob(320)  { 
+        font-size: 40px; }
+    
+}
+.blog-wrapp{
+    position: relative;
+.left{
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 25px);
+    transform: translate(-50%, -50%);
+    @include mob(1024)  {top: 66%;}
+    @include mob(768)  {top: 63%;}
+    @include mob(480)  { top: 66.5%;}
+    @include mob(320)  { 
+        top: 64.5%;
+        }
+    
+    
+}
+.right{
+    position: absolute;
+    top: 50%;
+    right: calc(100% - 55px);
+    transform: translate(-50%, -50%);
+    @include mob(1024)  {top: 66%;}
+    @include mob(768)  {top: 63%;}
+    @include mob(480)  {top: 66.5%;}
+    @include mob(320)  { 
+        top: 64.5%;
+        right: calc(100% - 45px); }
+}
+i.fas{
+    color: #bb8b36;
+    font-size: 50px;
+    @include mob(320)  { 
+        font-size: 38px; }
+}
+
+}
+
+p.gallery-copy {
+    @include mob(320)  {
+    margin-bottom: 50px;
+    }
+}
